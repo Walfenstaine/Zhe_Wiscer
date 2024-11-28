@@ -1,8 +1,16 @@
 {
-    "idSave": 162,
+    "idSave": 282,
     "isFirstSession": false,
-    "language": "en",
+    "language": "tr",
     "promptDone": false,
-    "record": 34,
-    "soundOn": true
+    "record": 11,
+    "coins": 1,
+    "svord_Helse": 100.0,
+    "soundOn": true,
+    "lvl": "Scene1",
+    "inv": [
+        6,
+        1,
+        0
+    ]
 }

@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace YG
 {
     [System.Serializable]
@@ -11,7 +13,13 @@ namespace YG
         public bool promptDone;
 
         public int record = 0;
+        public int coins = 30;
+        public float svord_Helse = 100;
         public bool soundOn;
+
+        public string lvl = "Scene1";
+
+        public int[] inv = new int[3];
 
         // Вы можете выполнить какие то действия при загрузке сохранений
         public SavesYG()
