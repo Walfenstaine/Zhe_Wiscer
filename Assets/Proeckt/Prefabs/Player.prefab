@@ -112,13 +112,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868311987468439610}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.31324953, y: 0.63393605, z: -0.63393587, w: 0.31324953}
   m_LocalPosition: {x: 0.1263, y: 0.032, z: 0.058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 46738664096702788}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -127.409}
 --- !u!212 &2943034517312581548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,8 +202,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 0.32, y: 0.03, z: 0.03}
-  m_Center: {x: -0.16, y: 0, z: 0}
+  m_Size: {x: 0.50777406, y: 0.17301245, z: 0.03}
+  m_Center: {x: -0.25388646, y: 0.007011867, z: 0}
 --- !u!54 &6165602009486642757
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -332,10 +332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8ff8d8ab30a6e4298791b3ab74f2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 20
   helse: 100
   muwe: {x: 0, y: 0, z: 0}
   bodey: {fileID: 46738664096702788}
+  cam: {fileID: 0}
   rb: {fileID: 4379048001394491456}
   helser: {fileID: 8271631560484526452}
   anim: {fileID: 7796781887872888936}

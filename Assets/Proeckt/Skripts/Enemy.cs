@@ -10,9 +10,9 @@ public class Enemy : MonoBehaviour
     public GameObject[] loot;
     public NavMeshAgent agent;
     public Image helser;
-    public Animator anim;
+    public Animator anim, ded;
     public float speed, helse;
-
+    bool aliv = true;
     public void Damag(int damag) 
     {
         if (helse > damag)
@@ -25,14 +25,21 @@ public class Enemy : MonoBehaviour
         }
         else 
         {
-            int index = Random.Range(0, 5);
-            Instantiate(loot[index], transform.position, Quaternion.identity);
-            YandexGame.savesData.record += 1;
-            YandexGame.NewLeaderboardScores("LEADER666", YandexGame.savesData.record);
-            Interface.rid.SaveGame();
-            Destroy(gameObject);
+            if (aliv)
+            {
+                int index = Random.Range(0, 5);
+                Instantiate(loot[index], transform.position, Quaternion.identity);
+                YandexGame.savesData.record += 1;
+                YandexGame.NewLeaderboardScores("LEADER666", YandexGame.savesData.record);
+                Interface.rid.SaveGame();
+                ded.SetTrigger("Dead");
+                
+                Destroy(gameObject,1);
+                aliv = false;
+            }
         }
     }
+
     private void FixedUpdate()
     {
         if (Vector3.Distance(Player_Muwer.rid.transform.position, transform.position) >= 0.3)

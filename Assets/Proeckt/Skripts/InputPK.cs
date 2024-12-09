@@ -26,15 +26,15 @@ public class InputPK : MonoBehaviour
         Player_Muwer.rid.Kik();
     }
 
-    public void MuweX(float X) 
+    public void MuweX(Vector2 m) 
     {
-        Player_Muwer.rid.muwe.x = X;
+        if (Player_Muwer.rid) 
+        {
+            Player_Muwer.rid.muwe = new Vector3(m.x, 0, m.y);
+        }
+       
     }
 
-    public void MuweZ(float Z)
-    {
-        Player_Muwer.rid.muwe.z = Z;
-    }
     void Update()
     {
         if (YandexGame.EnvironmentData.isDesktop) 

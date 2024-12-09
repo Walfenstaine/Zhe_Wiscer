@@ -12,6 +12,7 @@ public class Player_Muwer : MonoBehaviour
     public Rigidbody rb;
     public Image helser;
     public Animator anim, damag;
+    float timer = 0;
     public static Player_Muwer rid { get; set; }
     void Awake()
     {
@@ -45,7 +46,15 @@ public class Player_Muwer : MonoBehaviour
     }
     public void Kik() 
     {
-        anim.SetTrigger("Kik");
+        if (timer < Time.time)
+        {
+            timer = Time.time + 0.3f;
+            anim.SetTrigger("Kik");
+        }
+        else 
+        {
+            anim.SetTrigger("Kik2");
+        }
     }
 
     private void FixedUpdate()
